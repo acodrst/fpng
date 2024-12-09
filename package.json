@@ -1,0 +1,15 @@
+{
+  "name": "fpng",
+    "version": "1.0.0",
+    "author": "acodrst",
+    "description": "Creates Floppy PNGs",
+    "main": "./fpng",
+    "repository": { "type": "git", "url": "git@github.com:acodrst/fpng.git" },
+    "files": ["fpng.js", "LICENSE", "README.md"],
+    "license": "CC0-1.0",
+    "dependencies": {
+      "upng-js": "github:acodrst/UPNG.js",
+      "pako": "github:acodrst/pako",
+      "pxxl": "github:acodrst/pxxl.js"
+    }
+}
