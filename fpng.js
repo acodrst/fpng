@@ -122,11 +122,6 @@ function fpng(text, domain, tss) {
     if (ptr < 120 * 4) flp_dat_arr[x] = logo[y * 120 * 4 + ptr];
     ptr++;
   }
-  console.log(
-    (top_padding + bottom_padding +
-      (font_height + line_below) * num_lines) *
-      (width + 1),
-  );
   return new Uint8Array(
     UPNG.encode(
       [flp_dat_arr],
