@@ -8,6 +8,9 @@ This is an ES module. Import:
 import { fpng } from "fpng"
 ```
 
-Call fpng(<text to embed>,<domain for label>,<timestamp>)
+Call function:
 
+```plaintext
+fpng(<text to embed>,<domain for label>,<timestamp>)
+```
 fpng returns a Uint8Array of a PNG image.
