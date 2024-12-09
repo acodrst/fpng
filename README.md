@@ -14,3 +14,7 @@ Call function:
 fpng(<text to embed>,<domain for label>,<timestamp>)
 ```
 fpng returns a Uint8Array of a PNG image.
+
+Example:
+
+![](example.png)
