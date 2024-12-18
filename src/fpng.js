@@ -2,7 +2,7 @@ import { UPNG } from 'UPNG'
 console.log(UPNG)
 import * as px from "pxxl";
 const pf = px.Pxxl.Font.ParseBDF(Deno.readTextFileSync("assets/5x7.bdf"));
-function fpng(text) {
+function fpng(label,text) {
   const f_sides = 2;
   const f_tracks = 80;
   const f_sectors = 18;
@@ -25,7 +25,7 @@ function fpng(text) {
     ...dat,
     ...dat_fill,
   ]);
-  const pixels = pf.getPixels(text);
+  const pixels = pf.getPixels(label);
   for (const pixel of pixels) {
     for (let i = 0; i < 4; i++) {
       flp_dat_arr[
