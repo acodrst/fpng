@@ -15,8 +15,9 @@
   },
   "license": "CC0-1.0",
   "dependencies": {
-    "UPNG": "github:acodrst/UPNG.js",
-    "pxxl": "github:acodrst/pxxl.js"
+    "@hpcc-js/wasm-zstd": "^1.2.1",
+    "pxxl": "github:acodrst/pxxl.js",
+    "UPNG": "github:acodrst/UPNG.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",

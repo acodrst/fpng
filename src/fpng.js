@@ -1,13 +1,14 @@
 import { UPNG } from 'UPNG'
-console.log(UPNG)
+import { Zstd } from "@hpcc-js/wasm-zstd";
 import * as px from "pxxl";
+const zstd = await Zstd.load();
 const pf = px.Pxxl.Font.ParseBDF(Deno.readTextFileSync("assets/5x7.bdf"));
 function fpng(label,text) {
   const f_sides = 2;
   const f_tracks = 80;
   const f_sectors = 18;
   const f_bytes = 512;
-  const dat = new TextEncoder().encode(text);
+  const dat = zstd.compress(new TextEncoder().encode(text));
   const width = 1024;
   const font_height = 7;
   console.log(
