@@ -8,7 +8,7 @@ function fpng(label,text) {
   const f_tracks = 80;
   const f_sectors = 18;
   const f_bytes = 512;
-  const dat = zstd.compress(new TextEncoder().encode(text));
+  const dat = zstd.compress(new TextEncoder().encode(text),number=22);
   const width = 1024;
   const font_height = 7;
   console.log(
