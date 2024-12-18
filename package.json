@@ -1,15 +1,28 @@
 {
   "name": "fpng",
-    "version": "1.0.0",
-    "author": "acodrst",
-    "description": "Creates Floppy PNGs",
-    "main": "./fpng",
-    "repository": { "type": "git", "url": "git@github.com:acodrst/fpng.git" },
-    "files": ["fpng.js", "LICENSE", "README.md"],
-    "license": "CC0-1.0",
-    "dependencies": {
-      "upng-js": "github:acodrst/UPNG.js",
-      "pako": "github:acodrst/pako",
-      "pxxl": "github:acodrst/pxxl.js"
-    }
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Scott H.",
+  "description": "Creates Floppy PNGs",
+  "main": "src/fpng.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/rollup/dist/bin/rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:acodrst/fpng.git"
+  },
+  "license": "CC0-1.0",
+  "dependencies": {
+    "UPNG": "github:acodrst/UPNG.js",
+    "pxxl": "github:acodrst/pxxl.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "rollup": "^4.24.0",
+    "rollup-license-plugin": "^3.0.0"
+  }
 }
