@@ -47,6 +47,6 @@ function fpng(label,text) {
   console.log(
     `Floppy PNG Size=${img.length}`,
   );
-  return img
+  return {"im":img,"ln":dat.length}
 }
 export { fpng };
