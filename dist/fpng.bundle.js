@@ -7817,7 +7817,8 @@ function fpng(label,text) {
   const f_tracks = 80;
   const f_sectors = 18;
   const f_bytes = 512;
-  const dat = zstd.compress(new TextEncoder().encode(text));
+  const dat = zstd.compress(new TextEncoder().encode(text),9);
+  Deno.writeFileSync('dat.z',dat);
   const width = 1024;
   const font_height = 7;
   console.log(
@@ -7856,7 +7857,7 @@ function fpng(label,text) {
   console.log(
     `Floppy PNG Size=${img.length}`,
   );
-  return img
+  return {"im":img,"ln":dat.length}
 }
 
 export { fpng };
