@@ -11,9 +11,11 @@ import { fpng } from "fpng"
 Call function:
 
 ```plaintext
-fpng(<text to embed>,<domain for label>,<timestamp>)
+fpng(<label>,<text>)
 ```
-fpng returns a Uint8Array of a PNG image.
+fpng returns an obect:
+  {"im":<Uint8Array of PNG>,"ln":<data length>}
+
 
 Example:
 
